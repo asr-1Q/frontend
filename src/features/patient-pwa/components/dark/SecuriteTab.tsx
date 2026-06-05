@@ -1,0 +1,1 @@
+export { SecuriteTab } from '../SecuriteTab'

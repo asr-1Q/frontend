@@ -1,0 +1,1 @@
+export { CarteCSI as CarteTab } from '../CarteCSI'
