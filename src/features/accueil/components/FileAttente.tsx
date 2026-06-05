@@ -252,7 +252,7 @@ interface Props {
   afficherTermines?: boolean
 }
 
-export default function FileAttente({ file, loading, onRefresh, afficherTermines = false }: Props) {
+export default function FileAttente({ file, loading, onRefresh, afficherTermines: _afficherTermines = false }: Props) {
   const [actionId,     setActionId]     = useState<number | null>(null)
   const [msg,          setMsg]          = useState<{ type: 'ok' | 'err'; text: string } | null>(null)
   const [medecins,     setMedecins]     = useState<MedecinDispo[]>([])

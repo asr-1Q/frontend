@@ -4,9 +4,6 @@ import { superAdminApi } from '../api/superAdminApi'
 import type { Hopital, NouvelHopital } from '../types'
 import { REGIONS_CAMEROUN, TYPES_HOPITAL } from '../types'
 
-const fmtDate = (iso: string) =>
-  new Date(iso).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' })
-
 function ModalHopital({ onClose, onSave }: { onClose: () => void; onSave: () => void }) {
   const [form, setForm] = useState<NouvelHopital>({
     nom: '', code: '', ville: '', region: 'Littoral', type: 'public',
