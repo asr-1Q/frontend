@@ -4,7 +4,7 @@ import {
   FiX, FiThermometer, FiHeart, FiActivity, FiWind, FiDroplet,
   FiUserCheck, FiXCircle, FiPrinter, FiPlus
 } from 'react-icons/fi'
-import type { PatientAttente } from '../types'
+import type { PatientAttente, ConstantesForm } from '../types'
 import { saisirConstantes } from '../api/infirmierApi'
 import api from '@/lib/axios'
 
