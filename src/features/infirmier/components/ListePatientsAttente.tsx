@@ -61,7 +61,7 @@ export default function ListePatientsAttente({ patients, onPrendreConstantes, lo
               {/* Heure */}
               <td className="px-4 py-3 whitespace-nowrap">
                 <div className="flex items-center gap-2 text-zinc-600">
-                  <span className="text-zinc-400">🕐</span>
+                  <span className="text-zinc-400"></span>
                   <span className="font-medium">{heureArrivee(patient.created_at)}</span>
                   <span className="text-xs text-zinc-400">({dureeAttente(patient.created_at)})</span>
                 </div>
@@ -102,7 +102,7 @@ export default function ListePatientsAttente({ patients, onPrendreConstantes, lo
                     {patient.priorite}
                   </span>
                   {patient.urgence && (
-                    <span className="block text-xs text-red-600 font-medium">🚨 Urgence</span>
+                    <span className="block text-xs text-red-600 font-medium"> Urgence</span>
                   )}
                 </div>
               </td>
