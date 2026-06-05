@@ -406,8 +406,6 @@ export const CarteCSI = () => {
   const loadingTab = false
   const loadCarte = async () => {}
   const handleUpdateProfil = async (nom: string, tel: string) => { setPatient((p: any) => ({ ...p, contact_urgence_nom: nom, contact_urgence_telephone: tel })); return true }
-  const _handleUploadPhoto = async (_file: File) => { return '/images/photo.jpg' }
-  const _savingProfil = false
   const uploadingPhoto: boolean = false
 
   const [verseau,        setVerseau]        = useState(false)
@@ -416,7 +414,7 @@ export const CarteCSI = () => {
   const [logoB64,        setLogoB64]        = useState<string | null>(null)
   const [editing,        setEditing]        = useState(false)
   const [consentement,   setConsentement]   = useState(false)
-  const [_uploadingPhotoLocal, setUploadingPhotoLocal] = useState(false)
+  const [, setUploadingPhotoLocal] = useState(false)
   const [contactUrgence, setContactUrgence] = useState({ nom: patient?.contact_urgence_nom ?? '', telephone: patient?.contact_urgence_telephone ?? '' })
   const [generatingCard, setGeneratingCard] = useState(false)
   const [msgOk,          setMsgOk]          = useState<string | null>(null)
@@ -520,8 +518,7 @@ export const CarteCSI = () => {
     if (!cropperFile) return
     setUploadingPhotoLocal(true)
     try {
-      const blob = await (await fetch(cropped)).blob()
-      const _file = new File([blob], 'photo.jpg', { type: 'image/jpeg' })
+      await (await fetch(cropped)).blob()
       const res = { photo_url: '/images/photo.jpg' } 
       if (res.photo_url) setMsgOk('Photo enregistrée')
     } catch { setMsgErr('Photo non sauvegardée côté serveur') }
