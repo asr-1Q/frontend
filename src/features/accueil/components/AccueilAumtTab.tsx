@@ -21,19 +21,19 @@ import api from '@/lib/axios'
 const MOTIFS_PREDEFINIS = [
   {
     id:    'accident',
-    emoji: '🚑',
+    emoji: '',
     label: 'Accident / Traumatisme',
     texte: "Patient victime d'un accident ou traumatisme nécessitant un accès immédiat aux antécédents médicaux pour éviter toute erreur de traitement.",
   },
   {
     id:    'inconscient',
-    emoji: '😵',
+    emoji: '',
     label: 'Patient inconscient / Non communicant',
     texte: "Patient inconscient ou dans l'incapacité de communiquer ses antécédents. Accès nécessaire pour une prise en charge sécurisée.",
   },
   {
     id:    'allergie',
-    emoji: '⚠️',
+    emoji: '',
     label: 'Risque allergique inconnu',
     texte: 'Prescription imminente d\'un traitement avec risque allergique potentiel. Accès aux antécédents requis avant administration.',
   },
@@ -45,13 +45,13 @@ const MOTIFS_PREDEFINIS = [
   },
   {
     id:    'transfert',
-    emoji: '🔄',
+    emoji: '',
     label: 'Transfert inter-établissement',
     texte: "Patient transféré d'un autre établissement sans dossier physique. Accès requis pour assurer la continuité des soins.",
   },
   {
     id:    'autre',
-    emoji: '✏️',
+    emoji: '',
     label: 'Autre motif',
     texte: '',
   },
